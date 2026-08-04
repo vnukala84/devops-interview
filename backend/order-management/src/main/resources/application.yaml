@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: order-management
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order_management
+    username: devops_user
+    password: devops123
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+server:
+  port: 8080
